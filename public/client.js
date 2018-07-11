@@ -1,7 +1,11 @@
 //connect to server
-const socket = io.connect("http://localhost:8080");
+const socket = io();
 socket.on('connect', data => {
   socket.emit('join', 'client connected to server')
+})
+
+socket.on('disconnect', () => {
+  console.log('client disconnected from server');
 })
 
 //update messages on thread event
