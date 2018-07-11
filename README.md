@@ -3,7 +3,7 @@ Node | Express| Socket.io chat app built for anonymous messaging functionality
 
 ## Demo
 
-You can demo this web app at:  [AnonChat](https://tbd.com/).
+You can demo this web app at:  [AnonChat](https://mercerbe.github.io/AnonChat/).
 
 ## Installation
 
