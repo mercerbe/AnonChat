@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io').listen(server);
 
 //static routes
 app.use(express.static('public'));
@@ -26,7 +26,7 @@ io.on('connection', client => {
     client.emit('thread', data)
     client.broadcast.emit('thread', data)
   })
-  
+
 })
 
 
