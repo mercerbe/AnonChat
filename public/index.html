@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anon Chat</title>
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="master.css">
+  <!-- Semanitc ui-->
+  <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="./dist/semantic.min.js"></script>
+  <!-- socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"> -->
+
+  </script>
+</head>
+
+<body>
+  <h1 class="ui center aligned icon header">
+    <i class="circular user icon"></i>
+    <div class="content">
+      Anon Chat
+    </div>
+    <div class="sub header">
+      ||Chat with connected users||
+    </div>
+  </h1>
+
+<!-- message input -->
+<div class="ui centered grid">
+  <div class="six wide column">
+  <form class="ui form">
+    <div class="field">
+      <label>Message</label>
+      <textarea rows="4" id="message_body" placeholder="type your message here..."></textarea>
+    </div>
+    <input type="submit" value= "Send" id="message_submit" class="ui button"></input>
+  </form>
+  </div>
+  <!-- message posts -->
+  <div class="six wide column all_messages">
+  <div class="ui middle aligned animated list message_display">
+    <div class="item">
+      <img class="ui avatar image" src="./images/avatar2.png" alt="">
+      <div class="content">
+        <div class="header message_header">
+          user:
+        </div>
+        <div class="description message_text">
+          text
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- client js -->
+  <script type="text/javascript" src="client.js"></script>
+</body>
+
+</html>
